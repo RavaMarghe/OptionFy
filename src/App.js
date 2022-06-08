@@ -3,8 +3,6 @@ import { Footer } from "./Components/Footer";
 
 import './index.css';
 import { Header } from "./Components/Header";
-
-import Nav from "./Components/Nav";
 import Hero from "./Components/Hero";
 import Pricing from "./Components/Pricing"
 
