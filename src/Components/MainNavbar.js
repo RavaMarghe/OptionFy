@@ -49,9 +49,9 @@ export const MainNavbar = () => {
             </a>
           </li>
         </ul>
-        <img src={Img} alt="logo" className="w-28 absolute bottom-0 right-0"/>
+        <img src={Img} alt="logo" className="w-28 absolute bottom-0 right-0 sm:hidden lg:block"/>
         
-        <div class="ml-auto lg:hidden">
+        <div class="ml-auto lg:hidden z-10">
           <button
             aria-label="Open Menu"
             title="Open Menu"
@@ -76,32 +76,15 @@ export const MainNavbar = () => {
           {isMenuOpen && (
             <div class="absolute top-0 left-0 w-full">
               <div class="p-5 bg-white border rounded shadow-sm">
-                <div class="flex items-center justify-between mb-4">
-                  <div>
+                <div class="flex items-center justify-between mb-4 border-b-2 border-black">
+                  <div >
                     <a
                       href="/"
                       aria-label="Company"
                       title="Company"
                       class="inline-flex items-center"
                     >
-                      <svg
-                        class="w-8 text-deep-purple-accent-400"
-                        viewBox="0 0 24 24"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeMiterlimit="10"
-                        stroke="currentColor"
-                        fill="none"
-                      >
-                        <rect x="3" y="1" width="7" height="12" />
-                        <rect x="3" y="17" width="7" height="6" />
-                        <rect x="14" y="1" width="7" height="6" />
-                        <rect x="14" y="11" width="7" height="12" />
-                      </svg>
-                      <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                        Company
-                      </span>
+                      <img src={Img} alt="logo" className="w-28"></img>
                     </a>
                   </div>
                   <div>
@@ -127,9 +110,9 @@ export const MainNavbar = () => {
                         href="/"
                         aria-label="Our product"
                         title="Our product"
-                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 border-b-2 border-black"
                       >
-                        Product
+                        Feature
                       </a>
                     </li>
                     <li>
@@ -137,17 +120,7 @@ export const MainNavbar = () => {
                         href="/"
                         aria-label="Our product"
                         title="Our product"
-                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Features
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
-                        aria-label="Product pricing"
-                        title="Product pricing"
-                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 border-b-2 border-black"
                       >
                         Pricing
                       </a>
@@ -155,21 +128,21 @@ export const MainNavbar = () => {
                     <li>
                       <a
                         href="/"
-                        aria-label="Sign in"
-                        title="Sign in"
-                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        aria-label="Product pricing"
+                        title="Product pricing"
+                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 border-b-2 border-black"
                       >
-                        Sign in
+                        Login
                       </a>
                     </li>
                     <li>
                       <a
                         href="/"
-                        class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                        aria-label="Sign up"
-                        title="Sign up"
+                        aria-label="Sign in"
+                        title="Sign in"
+                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 border-b-2 border-black"
                       >
-                        Sign up
+                        Sign Up
                       </a>
                     </li>
                   </ul>

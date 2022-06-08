@@ -13,7 +13,7 @@ const Nav = () => {
               title="Company"
               class="inline-flex items-center"
             >
-         <img src={Logo} width={220}></img>
+         <img src={Logo} alt="logo" width={220}></img>
          
             </a>
             <ul class="flex items-center hidden space-x-8 lg:flex">
@@ -92,7 +92,7 @@ const Nav = () => {
                           class="inline-flex items-center"
                         >
                           
-                       <img src="https://www.optionsfy.com/static/media/oLogo.89f9797f.png" width={100}></img>
+                       <img src="https://www.optionsfy.com/static/media/oLogo.89f9797f.png" alt="pic" width={100}></img>
                         </a>
                       </div>
                       <div>

@@ -13,7 +13,7 @@ export class Footer extends React.Component {
               title="Company"
               className="inline-flex items-center"
             >
-              <img src={Img} className="w-28"/>
+              <img src={Img} alt="pic" className="w-28"/>
             </a>
           </div>
 
