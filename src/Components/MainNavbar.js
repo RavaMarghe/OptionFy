@@ -49,7 +49,8 @@ export const MainNavbar = () => {
             </a>
           </li>
         </ul>
-        <img src={Img} alt="logo" className="w-28 absolute bottom-0 right-0 sm:hidden lg:block"/>
+        <img src={Img} alt="logo" className="w-28 absolute bottom-0 right-0 hidden lg:block"/>
+        <img src={Img} alt="logo" className="w-28 absolute bottom-0 left-0 sm:block lg:hidden"/>
         
         <div class="ml-auto lg:hidden z-10">
           <button
