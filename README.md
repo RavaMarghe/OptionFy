@@ -9,7 +9,7 @@ Come contribuire e struttura progetto :
 
 Tools: 
 
-- Utilizzare Antd per realizzare i componenti delle pagine.
+- Utilizzare Tailwind per realizzare i componenti delle pagine.
 - I compiti assegnati a ciascun membro saranno visualizzabili su Trello (https://trello.com/b/UiAzyjO1/team-2)
   - Lo sprint verrà ridefinito settimanalmente
   - Ogni membro sarà responsibile dell'aggiornamento delle proprie task sul kanban di Trello, in funzione del loro stato.
