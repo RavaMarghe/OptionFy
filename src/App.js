@@ -13,10 +13,12 @@ export class App extends React.Component{
   render(){
       return (
           <div >
-              <Nav />
+              <Header />
               <Hero />
+              <div className="bg-gradient-to-t from-violet-900 to-grey-500">
               <Pricing />
               <Footer />
+              </div>
           </div>
       )
   }
