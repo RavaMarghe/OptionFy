@@ -5,7 +5,7 @@ export class Header extends React.Component {
   render() {
     return (
       <div className="border-b-2 border-black gradient-nav">
-        <MainNavbar  />
+        <MainNavbar />
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Img from "./assets/LogoWhite.png"
+import Img from "./assets/LogoWhite.png";
 
 export const MainNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,9 +49,17 @@ export const MainNavbar = () => {
             </a>
           </li>
         </ul>
-        <img src={Img} alt="logo" className="w-28 absolute bottom-0 right-0 hidden lg:block"/>
-        <img src={Img} alt="logo" className="w-28 absolute bottom-0 left-0 sm:block lg:hidden"/>
-        
+        <img
+          src={Img}
+          alt="logo"
+          className="w-28 absolute bottom-0 right-0 hidden lg:block"
+        />
+        <img
+          src={Img}
+          alt="logo"
+          className="w-28 absolute bottom-0 left-0 sm:block lg:hidden"
+        />
+
         <div class="ml-auto lg:hidden z-10">
           <button
             aria-label="Open Menu"
@@ -75,10 +83,10 @@ export const MainNavbar = () => {
             </svg>
           </button>
           {isMenuOpen && (
-            <div class="absolute top-0 left-0 w-full">
-              <div class="p-5 bg-white border rounded shadow-sm">
-                <div class="flex items-center justify-between mb-4 border-b-2 border-black">
-                  <div >
+            <div class="absolute top-3 left-1/2 w-full">
+              <div class="p-5 bg-white border rounded shadow-sm bg-gradient-to-t from-violet-900 to-gray-900 text-white w-2/4">
+                <div class="flex items-center justify-between mb-4 border-b-2 border-white">
+                  <div>
                     <a
                       href="/"
                       aria-label="Company"
@@ -111,7 +119,7 @@ export const MainNavbar = () => {
                         href="/"
                         aria-label="Our product"
                         title="Our product"
-                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 border-b-2 border-black"
+                        class="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
                       >
                         Feature
                       </a>
@@ -121,7 +129,7 @@ export const MainNavbar = () => {
                         href="/"
                         aria-label="Our product"
                         title="Our product"
-                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 border-b-2 border-black"
+                        class="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
                       >
                         Pricing
                       </a>
@@ -131,7 +139,7 @@ export const MainNavbar = () => {
                         href="/"
                         aria-label="Product pricing"
                         title="Product pricing"
-                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 border-b-2 border-black"
+                        class="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
                       >
                         Login
                       </a>
@@ -141,7 +149,7 @@ export const MainNavbar = () => {
                         href="/"
                         aria-label="Sign in"
                         title="Sign in"
-                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 border-b-2 border-black"
+                        class="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
                       >
                         Sign Up
                       </a>

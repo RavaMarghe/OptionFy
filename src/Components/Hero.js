@@ -14,17 +14,15 @@ const HeroOne = () => {
         <div className="relative flex justify-end max-w-xl mx-auto xl:pr-32 lg:max-w-screen-xl">
           <div className="mb-16 lg:pr-5 lg:max-w-lg lg:mb-0">
             <div className="max-w-xl mb-6">
-
               <h2 className="z-0 max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl text-center md:text-left">
                 THE ONLY DONE FOR
                 <br className="hidden md:block" />
                 YOU OPTION PICKER{" "}
                 <span className="inline-block text-deep-purple-accent-400"></span>
               </h2>
-              <p className="text-base text-gray-100 md:text-lg text-center md:text-left">
+              <p className="text-base text-gray-100 md:text-lg text-center md:text-left mb-1">
                 Get trade alerts. Cancel anytime.
               </p>
-
               <p className="text-center md:text-left text-gray-500">
                 <strong>
                   Enter your email to create or restart your membership
@@ -32,12 +30,12 @@ const HeroOne = () => {
               </p>
             </div>
             <form>
-              <div className="flex flex-col md:flex-row">
+              <div>
                 <input
                   placeholder="Email"
                   required=""
                   type="text"
-                  className="flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-400 rounded shadow-sm appearance-none md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline bg-gray-900"
+                  className="flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-400 rounded shadow-sm appearance-none md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline bg-gray-900 text-white"
                 />
               </div>
               <div className="flex items-center mt-4">

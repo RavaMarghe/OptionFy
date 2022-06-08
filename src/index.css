@@ -17,6 +17,11 @@
   background-color: #37176A;
 }
 
+.bottone:hover {
+  border: 1px solid white;
+  background-color: rgb(73, 8, 73);
+}
+
 .gradient-nav {
   background: linear-gradient(to right, #3C1773, #19212D)
 }
