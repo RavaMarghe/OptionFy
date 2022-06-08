@@ -6,7 +6,7 @@ const Pricing = () => {
         <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12"></div>
         <div class="grid max-w-screen-md gap-10 md:grid-cols-2 sm:mx-auto">
           <div>
-            <div class="p-8 bg-gray-900 rounded">
+            <div class="p-8 bg-gray-900 rounded altezza">
               <div class="mb-4 text-center">
                 <p class="text-xl font-medium tracking-wide text-white">
                   Monthly Pro
@@ -17,6 +17,8 @@ const Pricing = () => {
                   </p>
                   <p class="text-lg text-gray-500">/ month</p>
                 </div>
+                <p className="text-transparent pt-4 underline">&nbsp;</p>
+
               </div>
               <ul class="mb-8 space-y-2">
                 <li class="flex items-center">
@@ -162,7 +164,7 @@ const Pricing = () => {
             <div class="w-9/12 h-2 mx-auto bg-gray-900 rounded-b opacity-25" />
           </div>
           <div>
-            <div class="p-8 bg-gray-900 rounded">
+            <div class="p-8 bg-gray-900 rounded altezza">
               <div class="mb-4 text-center">
                 <p class="text-xl font-medium tracking-wide text-white">
                   Annual Pro
@@ -173,7 +175,7 @@ const Pricing = () => {
                   </p>
                   <p class="text-lg text-gray-500">/ year</p>
                 </div>
-                {/* aggiungere risparmio */}
+                <p className="text-white pt-4 underline">SAVE $134 ANNUALLY</p>
               </div>
               <ul class="mb-8 space-y-2">
                 <li class="flex items-center">

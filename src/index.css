@@ -23,5 +23,9 @@
 }
 
 .gradient-nav {
-  background: linear-gradient(to right, #3C1773, #19212D)
+  background: linear-gradient(to right, #3C1773, #19212D);
+}
+
+.altezza {
+  height: 33rem;
 }

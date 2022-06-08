@@ -13,7 +13,7 @@ const HeroOne = () => {
         </div>
         <div className="relative flex justify-end max-w-xl mx-auto xl:pr-32 lg:max-w-screen-xl">
           <div className="mb-16 lg:pr-5 lg:max-w-lg lg:mb-0">
-            <div className="max-w-xl mb-6">
+            <div className="max-w-xl mb-6 sm:pt-20 lg:pt-5">
               <h2 className="z-0 max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl text-center md:text-left">
                 THE ONLY DONE FOR
                 <br className="hidden md:block" />
@@ -41,7 +41,7 @@ const HeroOne = () => {
               <div className="flex items-center mt-4">
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none bottone"
+                  className="inline-flex items-center justify-center h-12 px-20 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none bottone"
                 >
                   Get Started
                 </button>
