@@ -1,21 +1,21 @@
 import { useState } from "react";
+import Img from "./assets/logo.png"
 
 export const MainNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-
-          <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-      <div class="relative flex items-center grid-cols-2 lg:grid-cols-3 justify-around">
+    <div class="px-4 py-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+      <div class="relative flex items-center grid-cols-2 lg:grid-cols-3 justify-center relative">
         <ul class="flex items-center hidden space-x-8 lg:flex">
-        <li>
+          <li>
             <a
               href="/"
               aria-label="Our product"
-              title="logo"
-              class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              title="Our product"
+              class="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
-              Product
+              Feature
             </a>
           </li>
           <li>
@@ -23,19 +23,9 @@ export const MainNavbar = () => {
               href="/"
               aria-label="Our product"
               title="Our product"
-              class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              class="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
-              Product
-            </a>
-          </li>
-          <li>
-            <a
-              href="/"
-              aria-label="Our product"
-              title="Our product"
-              class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-            >
-              Features
+              Pricing
             </a>
           </li>
           <li>
@@ -43,34 +33,24 @@ export const MainNavbar = () => {
               href="/"
               aria-label="Product pricing"
               title="Product pricing"
-              class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              class="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
-              Pricing
-            </a>
-          </li>
-        </ul>
-        <ul class="flex items-center hidden ml-auto space-x-8 lg:flex">
-          <li>
-            <a
-              href="/"
-              aria-label="Sign in"
-              title="Sign in"
-              class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-            >
-              Sign in
+              Login
             </a>
           </li>
           <li>
             <a
               href="/"
-              class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-purple-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-              aria-label="Sign up"
-              title="Sign up"
+              aria-label="Our product"
+              title="Our product"
+              class="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
-              Sign up
+              Sign Up
             </a>
           </li>
         </ul>
+        <img src={Img} alt="logo" className="w-28 absolute bottom-0 right-0"/>
+        
         <div class="ml-auto lg:hidden">
           <button
             aria-label="Open Menu"
@@ -137,7 +117,7 @@ export const MainNavbar = () => {
                           d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
                         />
                       </svg>
-                    </button>z
+                    </button>
                   </div>
                 </div>
                 <nav>
@@ -200,7 +180,5 @@ export const MainNavbar = () => {
         </div>
       </div>
     </div>
-
-
   );
 };
