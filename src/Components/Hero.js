@@ -2,7 +2,7 @@ import Img from "./assets/landing.png";
 
 const HeroOne = () => {
   return (
-    <div className="bg-gradient-to-b from-violet-900 to-grey-500">
+    <div className="bg-gradient-to-b from-violet-900 to-black">
       <div className="relative flex flex-col px-4 py-16 mx-auto lg:block lg:flex-col lg:py-32 xl:py-48 md:px-8 sm:max-w-xl md:max-w-full">
         <div className="z-0 flex justify-center h-full -mx-4 overflow-hidden lg:pt-24 lg:pb-16 lg:pr-8 xl:pr-0 lg:w-1/2 lg:absolute lg:justify-end lg:bottom-0 lg:left-0 lg:items-center">
           <img
@@ -15,17 +15,17 @@ const HeroOne = () => {
           <div className="mb-16 lg:pr-5 lg:max-w-lg lg:mb-0">
             <div className="max-w-xl mb-6">
 
-              <h2 className="z-0 max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center md:text-left">
+              <h2 className="z-0 max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl text-center md:text-left">
                 THE ONLY DONE FOR
                 <br className="hidden md:block" />
                 YOU OPTION PICKER{" "}
                 <span className="inline-block text-deep-purple-accent-400"></span>
               </h2>
-              <p className="text-base text-gray-700 md:text-lg text-center md:text-left">
+              <p className="text-base text-gray-100 md:text-lg text-center md:text-left">
                 Get trade alerts. Cancel anytime.
               </p>
 
-              <p className="text-center md:text-left">
+              <p className="text-center md:text-left text-gray-500">
                 <strong>
                   Enter your email to create or restart your membership
                 </strong>
@@ -37,7 +37,7 @@ const HeroOne = () => {
                   placeholder="Email"
                   required=""
                   type="text"
-                  className="flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                  className="flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-400 rounded shadow-sm appearance-none md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline bg-gray-900"
                 />
               </div>
               <div className="flex items-center mt-4">

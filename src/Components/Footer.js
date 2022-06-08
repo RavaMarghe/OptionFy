@@ -1,5 +1,5 @@
 import React from "react";
-import Img from "./assets/logo.png";
+import Img from "./assets/LogoWhite.png";
 
 export class Footer extends React.Component {
   render() {
@@ -16,14 +16,14 @@ export class Footer extends React.Component {
               <img src={Img} alt="pic" className="w-28"/>
             </a>
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-end text-gray-100">
             <a className="p-2">TERMS OF SERVICE</a>
             <a className="p-2">PRIVACY POLICY</a>
             <a className="p-2">DISCLAIMER</a>
           </div>
 
           <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
-            <p className="text-sm">
+            <p className="text-sm text-gray-100">
               Disclaimer: Please be aware that trading stocks, futures, stock
               options, and futures options involves a substantial risk of loss
               and is not suitable for all investors. Past performance is not

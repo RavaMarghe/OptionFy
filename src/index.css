@@ -16,3 +16,7 @@
 .bottone {
   background-color: #37176A;
 }
+
+.gradient-nav {
+  background: linear-gradient(to right, #3C1773, #19212D)
+}

@@ -13,7 +13,7 @@ export class App extends React.Component{
           <div >
               <Header />
               <Hero />
-              <div className="bg-gradient-to-t from-violet-900 to-grey-500">
+              <div className="bg-gradient-to-t from-violet-900 to-black">
               <Pricing />
               <Footer />
               </div>
