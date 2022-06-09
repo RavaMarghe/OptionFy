@@ -1,3 +1,5 @@
+import Modal3 from "./Modale3";
+
 const Pricing = () => {
   return (
     <div className="relative w-full h-full">
@@ -151,12 +153,7 @@ const Pricing = () => {
                   </p>
                 </li>
               </ul>
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-accent-400 hover:bg-teal-accent-700 focus:shadow-outline focus:outline-none bottone"
-              >
-                Get Now
-              </button>
+              <Modal3 />
             </div>
             <div className="w-11/12 h-2 mx-auto bg-gray-900 rounded-b opacity-75" />
             <div className="w-10/12 h-2 mx-auto bg-gray-900 rounded-b opacity-50" />
@@ -308,12 +305,7 @@ const Pricing = () => {
                   </p>
                 </li>
               </ul>
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-white transition duration-200 rounded shadow-md bg-teal-accent-400 hover:bg-teal-accent-700 focus:shadow-outline focus:outline-none bottone"
-              >
-                Get Now
-              </button>
+              < Modal3 />
             </div>
             <div className="w-11/12 h-2 mx-auto bg-gray-900 rounded-b opacity-75" />
             <div className="w-10/12 h-2 mx-auto bg-gray-900 rounded-b opacity-50" />

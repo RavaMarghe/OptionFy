@@ -71,7 +71,7 @@ const Tabs = ({ color }) => {
   );
 };
 
-export default function TabsRender() {
+export default function TabsRender3() {
   return (
     <>
       <Tabs color="pink" />
