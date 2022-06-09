@@ -1,8 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
   font-family: "Josefin Sans", sans-serif;
@@ -14,7 +13,7 @@
 }
 
 .bottone {
-  background-color: #37176A;
+  background-color: #37176a;
 }
 
 .bottone:hover {
@@ -23,7 +22,7 @@
 }
 
 .gradient-nav {
-  background: linear-gradient(to right, #3C1773, #19212D);
+  background: linear-gradient(to right, #3c1773, #19212d);
 }
 
 .altezza {

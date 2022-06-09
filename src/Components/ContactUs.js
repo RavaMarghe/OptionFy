@@ -19,7 +19,13 @@ export default function ContactUs() {
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-gradient-to-t from-violet-900 to-gray-900 text-white outline-none focus:outline-none">
                 {/*header*/}
                 <FormContact />
-
+                <button
+                  className="inline-flex items-center justify-center h-12 px-6 font-medium text-white mx-3 mb-5 bottone"
+                  type="button"
+                  onClick={() => setShowModal(false)}
+                >
+                  Close
+                </button>
                 {/*body*/}
                 {/*footer*/}
               </div>

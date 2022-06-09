@@ -37,8 +37,11 @@ export class Footer extends React.Component {
             </p>
             <p>
               INFORMATION IS FOR GENERAL EDUCATIONAL AND RESEARCH PURPOSES AND
-              SHOULD NOT BE CONSTRUED AS INDIVIDUAL INVESTMENT ADVICE. More info 
-             <a href="/" className="hover:text-orange-300 "> here</a> 
+              SHOULD NOT BE CONSTRUED AS INDIVIDUAL INVESTMENT ADVICE. More info
+              <a href="/" className="hover:text-orange-300 ">
+                {" "}
+                here
+              </a>
             </p>
           </div>
         </div>

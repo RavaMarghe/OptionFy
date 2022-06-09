@@ -18,7 +18,6 @@ const Pricing = () => {
                   <p class="text-lg text-gray-500">/ month</p>
                 </div>
                 <p className="text-transparent pt-4 underline">&nbsp;</p>
-
               </div>
               <ul class="mb-8 space-y-2">
                 <li class="flex items-center">

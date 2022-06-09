@@ -54,10 +54,10 @@ const Tabs = ({ color }) => {
           <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded">
             <div className="px-4 py-5 flex-auto">
               <div className="tab-content tab-space">
-                <div className={openTab === 2 ? "block" : "hidden"} id="link1">
+                <div className={openTab === 1 ? "block" : "hidden"} id="link1">
                   <FormLogin />
                 </div>
-                <div className={openTab === 1 ? "block" : "hidden"} id="link2">
+                <div className={openTab === 2 ? "block" : "hidden"} id="link2">
                   <FormRegister />
                 </div>
               </div>
@@ -69,7 +69,7 @@ const Tabs = ({ color }) => {
   );
 };
 
-export default function TabsRender() {
+export default function TabsRender2() {
   return (
     <>
       <Tabs color="pink" />

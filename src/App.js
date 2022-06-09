@@ -18,7 +18,7 @@ export class App extends React.Component {
           <BodyContent />
           <Pricing />
           <Footer />
-          <ContactUs/>
+          <ContactUs />
         </div>
       </div>
     );
