@@ -225,7 +225,7 @@ const Pricing = () => {
                       />
                     </svg>
                   </div>
-                  <p class="font-medium text-gray-300">
+                  <p className="font-medium text-gray-300">
                     Suggested strike prices for each symbol
                   </p>
                 </li>
