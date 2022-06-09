@@ -43,7 +43,10 @@ export class BodyContent extends React.Component {
     return (
       <div>
         {mYLine.map((line) => (
-          <div key={line.id} className="text-gray-100 flex pb-1 mx-2 mb-2 md:p-5 md:pb-5 md:mx-20 md:mb-3 border-2 lg:rounded-tr-full lg:rounded-bl-full rounded-tr-3xl rounded-bl-3xl">
+          <div
+            key={line.id}
+            className="text-gray-100 flex pb-1 mx-2 mb-2 md:p-5 md:pb-5 md:mx-20 md:mb-3 border-2 lg:rounded-tr-full lg:rounded-bl-full rounded-tr-3xl rounded-bl-3xl"
+          >
             <img
               src={line.pic}
               alt="line pic"

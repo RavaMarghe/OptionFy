@@ -1,8 +1,7 @@
 import React, { createRef } from "react";
 
 class FormContact extends React.Component {
-
-  _formRef = createRef()
+  _formRef = createRef();
   handleSubmit = (event) => {
     event.preventDefault();
     const firstName = event.target.elements.firstName.value;
@@ -11,9 +10,8 @@ class FormContact extends React.Component {
     const phone = event.target.elements.pNum.value;
     const passWord = event.target.elements.password.value;
     const textarea = event.target.elements.txtname.value;
-    console.log({firstName, lastName, mail, passWord, phone, textarea})
-  }
-
+    console.log({ firstName, lastName, mail, passWord, phone, textarea });
+  };
 
   render() {
     return (
@@ -90,8 +88,7 @@ class FormContact extends React.Component {
         </div>
       </form>
     );
-  };
-  
   }
+}
 
 export default FormContact;

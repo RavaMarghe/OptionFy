@@ -305,7 +305,7 @@ const Pricing = () => {
                   </p>
                 </li>
               </ul>
-              < Modal3 />
+              <Modal3 />
             </div>
             <div className="w-11/12 h-2 mx-auto bg-gray-900 rounded-b opacity-75" />
             <div className="w-10/12 h-2 mx-auto bg-gray-900 rounded-b opacity-50" />

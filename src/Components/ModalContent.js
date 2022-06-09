@@ -19,7 +19,6 @@ const Tabs = ({ color }) => {
                   (openTab === 1
                     ? "text-white bg-" + color + "-600"
                     : "text-" + color + "-600 bg-purple-900")
-
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -39,7 +38,6 @@ const Tabs = ({ color }) => {
                   (openTab === 2
                     ? "text-white bg-" + color + "-600"
                     : "text-" + color + "-600 bg-purple-900")
-
                 }
                 onClick={(e) => {
                   e.preventDefault();

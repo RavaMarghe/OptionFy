@@ -1,22 +1,20 @@
 import React from "react";
 
 class FormLogin extends React.Component {
+  state = {
+    mail: "",
+    password: "",
+  };
 
-state = {
-  mail: "",
-  password: "",
-}
+  handleInputChage = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    this.setState({ [name]: value });
+  };
 
-handleInputChage = (event) => {
-  const name = event.target.name
-  const value = event.target.value
-  this.setState({[name]: value})
-}
-
-handleSubmitConsole = () => {
-  console.log(this.state)
-
-}
+  handleSubmitConsole = () => {
+    console.log(this.state);
+  };
 
   render() {
     return (
@@ -62,8 +60,8 @@ handleSubmitConsole = () => {
             className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-gray-900 border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
             id="mail"
             name="mail"
-            value = {this.state.mail}
-            onChange = {this.handleInputChage}
+            value={this.state.mail}
+            onChange={this.handleInputChage}
           />
         </div>
         <div className="mb-1 sm:mb-2">
@@ -74,9 +72,8 @@ handleSubmitConsole = () => {
             className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-gray-900 border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
             id="password"
             name="password"
-            value = {this.state.password}
-            onChange = {this.handleInputChage}
-
+            value={this.state.password}
+            onChange={this.handleInputChage}
           />
         </div>
         <div className="mt-4 mb-2 sm:mb-4">
@@ -93,4 +90,4 @@ handleSubmitConsole = () => {
   }
 }
 
-export default FormLogin
+export default FormLogin;

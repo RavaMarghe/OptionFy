@@ -22,13 +22,13 @@ export default function Modal() {
                 {/*body*/}
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
-                <button
-                  className="inline-flex items-center justify-center h-10 px-6 font-medium text-white mx-3 mb-5 bottone w-full"
-                  type="button"
-                  onClick={() => setShowModal(false)}
-                >
-                  Close
-                </button>
+                  <button
+                    className="inline-flex items-center justify-center h-10 px-6 font-medium text-white mx-3 mb-5 bottone w-full"
+                    type="button"
+                    onClick={() => setShowModal(false)}
+                  >
+                    Close
+                  </button>
                 </div>
               </div>
             </div>

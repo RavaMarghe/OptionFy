@@ -21,10 +21,10 @@ export default function Modal2() {
                 <button
                   className="inline-flex items-center justify-center h-10 px-6 font-medium text-white mx-3 mb-5 bottone"
                   type="button"
-                  onClick={() => setShowModal(false)}>
+                  onClick={() => setShowModal(false)}
+                >
                   Close
                 </button>
-
               </div>
             </div>
           </div>
