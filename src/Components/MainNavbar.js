@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Img from "./assets/LogoWhite.png";
+import Modal from "./Modale";
 
 export const MainNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,14 +40,7 @@ export const MainNavbar = () => {
             </a>
           </li>
           <li>
-            <a
-              href="/"
-              aria-label="Our product"
-              title="Our product"
-              class="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
-            >
-              Sign Up
-            </a>
+              <Modal />
           </li>
         </ul>
         <img
