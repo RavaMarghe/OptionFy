@@ -9,13 +9,13 @@ export const MainNavbar = () => {
   return (
     <div class="px-4 py-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div class="relative flex items-center grid-cols-2 lg:grid-cols-3 justify-center relative">
-        <ul class="flex items-center hidden space-x-8 lg:flex">
+        <ul className="flex items-center hidden space-x-8 lg:flex">
           <li>
             <a
               href="/"
               aria-label="Our product"
               title="Our product"
-              class="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               Feature
             </a>
@@ -25,7 +25,7 @@ export const MainNavbar = () => {
               href="/"
               aria-label="Our product"
               title="Our product"
-              class="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               Pricing
             </a>
@@ -48,7 +48,7 @@ export const MainNavbar = () => {
           className="w-28 absolute bottom-0 left-0 sm:block lg:hidden"
         />
 
-        <div class="ml-auto lg:hidden z-10">
+        <div className="ml-auto lg:hidden z-10">
           <button
             aria-label="Open Menu"
             title="Open Menu"
@@ -71,15 +71,15 @@ export const MainNavbar = () => {
             </svg>
           </button>
           {isMenuOpen && (
-            <div class="absolute top-3 left-1/2 w-full">
-              <div class="p-5 bg-white border rounded shadow-sm bg-gradient-to-t from-violet-900 to-gray-900 text-white w-2/4">
-                <div class="flex items-center justify-between mb-4 border-b-2 border-white">
+            <div className="absolute top-3 left-1/2 w-full">
+              <div className="p-5 bg-white border rounded shadow-sm bg-gradient-to-t from-violet-900 to-gray-900 text-white w-2/4">
+                <div className="flex items-center justify-between mb-4 border-b-2 border-white">
                   <div>
                     <a
                       href="/"
                       aria-label="Company"
                       title="Company"
-                      class="inline-flex items-center"
+                      className="inline-flex items-center"
                     >
                       <img src={Img} alt="logo" className="w-28"></img>
                     </a>
@@ -88,7 +88,7 @@ export const MainNavbar = () => {
                     <button
                       aria-label="Close Menu"
                       title="Close Menu"
-                      class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                      className="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
@@ -101,13 +101,13 @@ export const MainNavbar = () => {
                   </div>
                 </div>
                 <nav>
-                  <ul class="space-y-4">
+                  <ul className="space-y-4">
                     <li>
                       <a
                         href="/"
                         aria-label="Our product"
                         title="Our product"
-                        class="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
+                        className="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
                       >
                         Feature
                       </a>
@@ -117,7 +117,7 @@ export const MainNavbar = () => {
                         href="/"
                         aria-label="Our product"
                         title="Our product"
-                        class="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
+                        className="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
                       >
                         Pricing
                       </a>
@@ -127,7 +127,7 @@ export const MainNavbar = () => {
                         href="/"
                         aria-label="Product pricing"
                         title="Product pricing"
-                        class="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
+                        className="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
                       >
                         Login
                       </a>
@@ -137,7 +137,7 @@ export const MainNavbar = () => {
                         href="/"
                         aria-label="Sign in"
                         title="Sign in"
-                        class="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
+                        className="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
                       >
                         Sign Up
                       </a>
