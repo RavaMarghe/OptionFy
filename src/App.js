@@ -6,6 +6,7 @@ import { Header } from "./Components/Header";
 import Hero from "./Components/Hero";
 import Pricing from "./Components/Pricing";
 import { BodyContent } from "./Components/BodyContent";
+import ContactUs from "./Components/ContactUs";
 
 export class App extends React.Component {
   render() {
@@ -17,6 +18,7 @@ export class App extends React.Component {
           <BodyContent />
           <Pricing />
           <Footer />
+          <ContactUs/>
         </div>
       </div>
     );
