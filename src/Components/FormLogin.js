@@ -13,6 +13,7 @@ class FormLogin extends React.Component {
   };
 
   handleSubmitConsole = () => {
+    e.preventDefault()
     console.log(this.state);
   };
 
