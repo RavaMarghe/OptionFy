@@ -29,7 +29,7 @@ export class BodyContent extends React.Component {
       {
         id: 4,
         title: "Built in options chain scanning",
-        text: "Overwhelmed by varying strike prices and which options to buy? We scan the entire options chain so you don’t have to, researching each possible trade ahead of time and recommend you the best plays",
+        text: "Overwhelmed by varying strike prices and which options to buy? We scan the entire options chain so you don’t have to, researching each possible trade ahead of time and recommend you the best plays.",
         pic: pic4,
       },
       {
@@ -57,7 +57,7 @@ export class BodyContent extends React.Component {
                 <h1 className="p-5 pb-5 mr-8 ml-5 text-2xl font-bold underline">
                   {row.title}
                 </h1>
-                <p className="p-5 mr-8 ml-5">{row.text}</p>
+                <p className="p-5 mr-8 ml-5 text-justify">{row.text}</p>
               </div>
             </div>
           ) : (
@@ -71,10 +71,10 @@ export class BodyContent extends React.Component {
                 className="pr-8 w-36 hidden md:block"
               ></img>
               <div>
-                <h1 className="p-5 pb-5 mr-8 ml-5 text-2xl font-bold underline">
+                <h1 className="p-5 pb-5 mr-8 ml-5 text-2xl font-bold underline text-right">
                   {row.title}
                 </h1>
-                <p className="p-5 pl-16 mr-5 ml-5">{row.text}</p>
+                <p className="p-5 pl-16 mr-5 ml-5 text-justify">{row.text}</p>
               </div>
             </div>
           )
