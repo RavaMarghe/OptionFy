@@ -7,7 +7,7 @@ import pic5 from "./assets/publicdomainq-rich_m1.svg";
 
 export class BodyContent extends React.Component {
   render() {
-    const mYLine = [
+    const myBody = [
       {
         id: 1,
         title: "Why Us",
@@ -42,24 +42,43 @@ export class BodyContent extends React.Component {
 
     return (
       <div>
-        {mYLine.map((line) => (
-          <div
-            key={line.id}
-            className="text-gray-100 flex pb-1 mx-2 mb-2 md:p-5 md:pb-5 md:mx-20 md:mb-3 border-2 lg:rounded-tr-full lg:rounded-bl-full rounded-tr-3xl rounded-bl-3xl"
-          >
-            <img
-              src={line.pic}
-              alt="line pic"
-              className="ml-10 w-28 hidden md:block"
-            ></img>
-            <div>
-              <h1 className="p-5 pb-5 mr-8 ml-5 text-2xl font-bold underline">
-                {line.title}
-              </h1>
-              <p className="p-5 mr-8 ml-5">{line.text}</p>
+        {myBody.map((row) =>
+          row.id % 2 ? (
+            <div
+              key={row.id}
+              className="text-gray-100 flex pb-1 mx-2 mb-2 md:p-5 md:pb-5 md:mx-20 md:mb-3 border-2 lg:rounded-tr-full lg:rounded-bl-full rounded-tr-3xl rounded-bl-3xl"
+            >
+              <img
+                src={row.pic}
+                alt="line pic"
+                className="ml-10 w-28 hidden md:block"
+              ></img>
+              <div>
+                <h1 className="p-5 pb-5 mr-8 ml-5 text-2xl font-bold underline">
+                  {row.title}
+                </h1>
+                <p className="p-5 mr-8 ml-5">{row.text}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ) : (
+            <div
+              key={row.id}
+              className="text-gray-100 flex flex-row-reverse pb-1 mx-2 mb-2 md:p-5 md:pb-5 md:mx-20 md:mb-3 border-2 lg:rounded-tr-full lg:rounded-bl-full rounded-tr-3xl rounded-bl-3xl"
+            >
+              <img
+                src={row.pic}
+                alt="line pic"
+                className="pr-8 w-36 hidden md:block"
+              ></img>
+              <div>
+                <h1 className="p-5 pb-5 mr-8 ml-5 text-2xl font-bold underline">
+                  {row.title}
+                </h1>
+                <p className="p-5 pl-16 mr-5 ml-5">{row.text}</p>
+              </div>
+            </div>
+          )
+        )}
       </div>
     );
   }
