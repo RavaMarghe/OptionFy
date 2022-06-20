@@ -1,5 +1,5 @@
 import React from "react";
-import FormContact from "./FormContact";
+import FormContact from "../modali/FormContact";
 
 export default function ContactUs() {
   const [showModal, setShowModal] = React.useState(false);

@@ -1,17 +1,17 @@
 import React from "react";
-import { Footer } from "./Components/Footer";
+import { Footer } from "./components/footer/Footer";
 
 import "./index.css";
-import { Header } from "./Components/Header";
-import Hero from "./Components/Hero";
-import Pricing from "./Components/Pricing";
-import { BodyContent } from "./Components/BodyContent";
-import ContactUs from "./Components/ContactUs";
+import { Header } from "./components/header/Header";
+import Hero from "./components/header/Hero";
+import { BodyContent } from "./components/body/BodyContent";
+import ContactUs from "./components/footer/ContactUs";
+import Pricing from "./components/footer/Pricing";
 
 export class App extends React.Component {
   render() {
     return (
-      <div>
+      <div className="bg-black">
         <Header />
         <Hero />
         <div className="bg-gradient-to-t from-violet-900 to-black">

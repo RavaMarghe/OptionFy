@@ -1,9 +1,9 @@
 import React from "react";
-import pic1 from "./assets/publicdomainq-rich_f2.svg";
-import pic2 from "./assets/pig.svg";
-import pic3 from "./assets/chart.svg";
-import pic4 from "./assets/money.svg";
-import pic5 from "./assets/publicdomainq-rich_m1.svg";
+import pic1 from "../../assets/body1.webp";
+import pic2 from "../../assets/body2.webp";
+import pic3 from "../../assets/body3.webp";
+import pic4 from "../../assets/body6.webp";
+import pic5 from "../../assets/body5.jpg";
 
 export class BodyContent extends React.Component {
   render() {
@@ -42,43 +42,56 @@ export class BodyContent extends React.Component {
 
     return (
       <div>
-        {myBody.map((row) =>
-          row.id % 2 ? (
+        {myBody.map((row) => (
+          <div
+            key={row.id}
+            className={
+              row.id % 2
+                ? "text-gray-100 flex justify-center overflow-hidden my-10 md:my-20 lg:my-24 mx-2 mb-2 p-5 lg:md:p-10 lg:pb-8 md:mx-10 lg:mx-20 border-x-4 border-y lg:rounded-tl-full lg:rounded-br-full rounded-tl-3xl rounded-brs-3xl border-violet-900 bg-black lg:h-75"
+                : "text-gray-100 flex flex-row-reverse justify-center items-centre overflow-hidden my-10 md:my-20 lg:my-24 mx-2 mb-2 p-5 lg:p-10 lg:pb-8 md:mx-10 lg:mx-20 border-x-4 border-y lg:rounded-tl-full lg:rounded-br-full rounded-tl-3xl rounded-br-3xl border-violet-900 bg-black lg:h-75"
+            }
+          >
             <div
-              key={row.id}
-              className="text-gray-100 flex pb-1 mx-2 mb-2 md:p-5 md:pb-5 md:mx-20 md:mb-3 border-2 lg:rounded-tr-full lg:rounded-bl-full rounded-tr-3xl rounded-bl-3xl"
+              className={
+                row.id % 2
+                  ? "flex justify-center items-center md:ml-2 lg:ml-16 lg:w-4/12"
+                  : "flex justify-center items-center mr-2 lg:mr-16 lg:w-4/12"
+              }
             >
               <img
                 src={row.pic}
                 alt="line pic"
-                className="ml-10 w-28 hidden md:block"
+                className="hidden lg:block w-4/5 rounded-md h-5/6"
               ></img>
-              <div>
-                <h1 className="p-5 pb-5 mr-8 ml-5 text-2xl font-bold underline">
-                  {row.title}
-                </h1>
-                <p className="p-5 mr-8 ml-5 text-justify">{row.text}</p>
-              </div>
             </div>
-          ) : (
             <div
-              key={row.id}
-              className="text-gray-100 flex flex-row-reverse pb-1 mx-2 mb-2 md:p-5 md:pb-5 md:mx-20 md:mb-3 border-2 lg:rounded-tr-full lg:rounded-bl-full rounded-tr-3xl rounded-bl-3xl"
+              className={
+                row.id % 2
+                  ? "flex flex-col justify-center lg:w-8/12 pr-18 lg:pr-20"
+                  : "flex flex-col justify-center lg:w-8/12 pl-18 lg:pl-20"
+              }
             >
-              <img
-                src={row.pic}
-                alt="line pic"
-                className="pr-8 w-36 hidden md:block"
-              ></img>
-              <div>
-                <h1 className="p-5 pb-5 mr-8 ml-5 text-2xl font-bold underline text-right">
-                  {row.title}
-                </h1>
-                <p className="p-5 pl-16 mr-5 ml-5 text-justify">{row.text}</p>
-              </div>
+              <h1
+                className={
+                  row.id % 2
+                    ? "px-2 md:px-5 md:ml-5 text-2xl font-bold text-violet-800 uppercase text-center lg:text-left"
+                    : "md:px-5 md:ml-8 text-2xl font-bold text-violet-800 uppercase text-center lg:text-left"
+                }
+              >
+                {row.title}
+              </h1>
+              <p
+                className={
+                  row.id % 2
+                    ? "p-5 lg:mr-8 lg:ml-5 text-justify"
+                    : "p-5 lg:ml-8 lg:mr-5 text-justify"
+                }
+              >
+                {row.text}
+              </p>
             </div>
-          )
-        )}
+          </div>
+        ))}
       </div>
     );
   }

@@ -1,4 +1,4 @@
-import Modal3 from "./Modale3";
+import Modal3 from "../modali/Modale3";
 
 const Pricing = () => {
   return (

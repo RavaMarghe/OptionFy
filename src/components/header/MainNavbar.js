@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Img from "./assets/LogoWhite.png";
-import Modal from "./Modale";
-import Modal2 from "./Modale2";
+import Img from "../../assets/LogoWhite.png";
+import Modal from "../modali/Modale";
+import Modal2 from "../modali/Modale2";
 
 export const MainNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
