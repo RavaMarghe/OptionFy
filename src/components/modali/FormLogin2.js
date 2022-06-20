@@ -18,9 +18,9 @@ function FormLogin2() {
 
     function handleSubmitConsole(e){
         e.preventDefault()
-       data === localStorage.getItem("email") && data2 === localStorage.getItem("password")
-      ? navigate('/dashboard')
-      : console.log('non sei registrato')
+        data === localStorage.getItem("email") && data2 === localStorage.getItem("password")
+        ? navigate('/dashboard')
+        : alert('You must be a registered user in order lo login into your dashboard!')
       }
       
     return(
