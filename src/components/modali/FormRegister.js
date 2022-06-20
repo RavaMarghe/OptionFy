@@ -20,6 +20,10 @@ class FormRegister extends React.Component {
       confirmPassWord,
       checked,
     });
+
+    localStorage.setItem("email", mail)
+    localStorage.setItem("password", passWord)
+
   };
 
   render() {
