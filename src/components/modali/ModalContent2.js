@@ -1,5 +1,5 @@
 import React from "react";
-import FormLogin from "./FormLogin";
+import FormLogin2 from "./FormLogin2";
 import FormRegister from "./FormRegister";
 
 const Tabs = ({ color }) => {
@@ -55,7 +55,7 @@ const Tabs = ({ color }) => {
             <div className="px-4 py-5 flex-auto">
               <div className="tab-content tab-space">
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <FormLogin />
+                  <FormLogin2 />
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
                   <FormRegister />

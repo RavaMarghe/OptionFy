@@ -1,5 +1,11 @@
+import { HeaderDashboard } from '../header/HeaderDashboard';
+
 export function Dashboard() {
+
     return(
-        <h1>Welcome in the dashboard</h1>
+        <div>
+        <HeaderDashboard />
+           <h1 className='text-center'>Welcome to the dashboard</h1>
+        </div>
     )
 }
