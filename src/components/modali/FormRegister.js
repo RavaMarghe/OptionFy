@@ -11,6 +11,7 @@ class FormRegister extends React.Component {
     const mail = event.target.elements.mail.value;
     const passWord = event.target.elements.passWord.value;
     const checked = event.target.elements.checkBox.checked;
+    this._formRef.current.reset()
     console.log({
       firstName,
       lastName,
@@ -18,7 +19,7 @@ class FormRegister extends React.Component {
       tel,
       passWord,
       confirmPassWord,
-      checked,
+      checked
     });
 
     localStorage.setItem("email", mail)

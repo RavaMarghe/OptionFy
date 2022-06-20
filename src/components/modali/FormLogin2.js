@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function FormLogin2() {
@@ -16,15 +16,20 @@ function FormLogin2() {
 
     const navigate = useNavigate()
 
+    const resetRef = useRef()
+
     function handleSubmitConsole(e){
         e.preventDefault()
+
         data === localStorage.getItem("email") && data2 === localStorage.getItem("password")
         ? navigate('/dashboard')
-        : alert('You must be a registered user in order lo login into your dashboard!')
+        : alert('You must be a registered user in order lo login into your dashboard!');
+
+        resetRef.current.reset()
       }
-      
+
     return(
-        <form>
+        <form ref={resetRef}> 
         <div className="flex justify-center w-full mb-3 ">
           <a
             href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?client_id=934601340853-ckneo3hfuhfq56baa4tmei1j7h0hjtrn.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fprod-optionsfy.auth.us-east-2.amazoncognito.com%2Foauth2%2Fidpresponse&scope=profile%20email%20openid&response_type=code&state=H4sIAAAAAAAAAG1S2ZLaMBD8Fz-Hw5A1x9tyLqzX3AmQSrmEPdiyJY0tyXhJKv8eGcImD3nT9HTXzHTrp1UokEtENgutvilqQJSutfzYCd35tRil1icrk3ihIUiPcDCkKWLEwOABoyD0Tdi2m21HkKQrCqpoq-Ai5THrBWdueBJCKiHQu_XMUGOtM9VvNDDTFIU6X-sB8obCgBL2XOh4DSozONyE9-f2mlWDNaYg_tnnD_yxjwowA2X1v1nACWUGMbWgYSWJUcBdeqaG_N2wNdFGLgrGzCkYwjAmjIGI_g--gY4xfLQEiqCaTUfN5WnqdZPBSnt5e7lY7Xejcqjzsu0meM4G6cv-EPeaftYSo9V27OaTAZ1e_GR79C_Jgo5Pojkaa3uaz3uTE9tLNptPxt4MgEYd8FqvrHsoa8GcF_xdHf3u13xzdCe9g2j7IvZeO340zg9Pdv6W7LbOyp_HNunlJerFusQaP7WuX4brlJaFGxwqg0BeQL6g0kuU2qxv7Ahrf4Mgxv76xx-oE05-mDsxElRjlVKVuQRS0beUwwYCFKEx3HaePne6dtNxqhlKmf7DqOp7PWst6anQVTZ39Ob9BKVLRUpFtHlozoQp-PUbADRL2JUCAAA.H4sIAAAAAAAAAOM-47JFfFWmlXPJpDZvxX5TjisMRvE1Qh93yIkqxB29ewcAwCwIFCAAAAA.3&flowName=GeneralOAuthFlow"
