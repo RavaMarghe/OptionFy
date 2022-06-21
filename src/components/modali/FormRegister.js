@@ -2,11 +2,14 @@ import React, { createRef } from "react";
 
 class FormRegister extends React.Component {
   _formRef = createRef();
-  
 
-  state ={
-    users: []
-  }
+  state = {
+    users: [],
+  };
+
+  consitionalSetItem = () => {
+    localStorage.setItem("users", this.state.users);
+  };
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -18,7 +21,7 @@ class FormRegister extends React.Component {
     const passWord = event.target.elements.passWord.value;
     const checked = event.target.elements.checkBox.checked;
 
-    this._formRef.current.reset()
+    this._formRef.current.reset();
 
     console.log({
       firstName,
@@ -27,21 +30,19 @@ class FormRegister extends React.Component {
       tel,
       passWord,
       confirmPassWord,
-      checked
+      checked,
     });
 
-    this.setState({ users: [...this.state.users, mail + passWord] })
-
-    localStorage.setItem("users", this.state.users)
-    
-    localStorage.getItem("users").includes(mail)
-    ? alert('Email already exists')
-    : setInterval(() => {
-          localStorage.setItem("users", this.state.users) //Perchè senza setInterval viene eseguito  localStorare.setItem
-      },2000)                                             //prima che venga eseguito this.setState?????
-    
-
-
+    this.setState({ users: [...this.state.users, mail + passWord] }, () => {
+      if (
+        localStorage.getItem("users") &&
+        localStorage.getItem("users").includes(mail)
+      ) {
+        alert("Email already exists");
+      } else {
+        this.consitionalSetItem();
+      }
+    });
   };
 
   render() {
