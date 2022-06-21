@@ -3,15 +3,15 @@ import { useNavigate } from "react-router-dom";
 
 function FormLogin2() {
 
-    const [data, setData] = useState("");
-    const [data2, setData2] = useState("");
+    const [email, setEmail] = useState("");
+    const [pass, setPass] = useState("");
     
     function handleInputChange(event) {
-        setData (event.target.value)
+        setEmail (event.target.value)
     }
     
     function handleInputChange2(event) {
-        setData2 (event.target.value);
+        setPass (event.target.value);
     }
 
     const navigate = useNavigate()
@@ -20,9 +20,11 @@ function FormLogin2() {
 
     function handleSubmitConsole(e){
         e.preventDefault()
+
+        const items = localStorage.getItem("users")
   
-        data && data2 && localStorage.getItem("users").includes(data+data2)
-        ? navigate('/dashboard')
+        email && pass && items.includes(email+pass)
+        ? navigate('/dashboard') 
         : alert('You must be a registered user in order to login into your dashboard!');
 
         resetRef.current.reset()
@@ -71,7 +73,7 @@ function FormLogin2() {
             className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-gray-900 border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
             id="mail"
             name="mail"
-            value={data.email}
+            value={email}
             onChange={handleInputChange}
           />
         </div>
@@ -83,7 +85,7 @@ function FormLogin2() {
             className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-gray-900 border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
             id="password"
             name="password"
-            value={data2.password}
+            value={pass}
             onChange={handleInputChange2}
           />
         </div>
