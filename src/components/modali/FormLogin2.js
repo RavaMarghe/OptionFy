@@ -20,10 +20,10 @@ function FormLogin2() {
 
     function handleSubmitConsole(e){
         e.preventDefault()
-
-        data === localStorage.getItem("email") && data2 === localStorage.getItem("password")
+  
+        data && data2 && localStorage.getItem("users").includes(data+data2)
         ? navigate('/dashboard')
-        : alert('You must be a registered user in order lo login into your dashboard!');
+        : alert('You must be a registered user in order to login into your dashboard!');
 
         resetRef.current.reset()
       }
