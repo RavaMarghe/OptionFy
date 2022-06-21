@@ -33,13 +33,14 @@ class FormRegister extends React.Component {
       checked,
     });
 
-    this.setState({ users: [...this.state.users, mail + passWord] }, () => {
+    
       if (localStorage.getItem("users") && localStorage.getItem("users").includes(mail)){
         alert("Email already exists");
       }else{
+        this.setState({ users: [...this.state.users, mail + passWord] }, () => {
         this.consitionalSetItem();
-      }
-    });
+      })
+    };
   };
 
   render() {
