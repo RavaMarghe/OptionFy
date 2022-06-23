@@ -6,8 +6,7 @@ import { Dashboard } from "./components/pages/Dashboard";
 import { ProtectedArea } from "./components/protection/ProtectedArea";
 import { Easter } from "./components/protection/Easter";
 
-export class App extends React.Component {
-  render() {
+export function App () {
     return (
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,4 +17,4 @@ export class App extends React.Component {
       </Routes>
     );
   }
-}
+
