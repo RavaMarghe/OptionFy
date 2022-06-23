@@ -10,7 +10,8 @@ class FormContact extends React.Component {
     const phone = event.target.elements.pNum.value;
     const passWord = event.target.elements.password.value;
     const textarea = event.target.elements.txtname.value;
-    console.log({ firstName, lastName, mail, passWord, phone, textarea });
+    console.log({ firstName, lastName, mail, passWord, phone, textarea })
+    this._formRef.current.reset()
   };
 
   render() {
