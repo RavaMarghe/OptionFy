@@ -7,20 +7,26 @@ import Modal2 from "../modali/Modale2";
 export const MainNavbarDashboard = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const easterEgg = localStorage.getItem('users')
-  const navigateToEaster = useNavigate()
-  function goEaster(){
-    navigateToEaster('/dashboard/easteregg')
+  const easterEgg = localStorage.getItem("users");
+  const navigateToEaster = useNavigate();
+  function goEaster() {
+    navigateToEaster("/dashboard/easteregg");
   }
 
   return (
     <div className="px-4 py-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-      <div className="relative flex items-center grid-cols-2 lg:grid-cols-3 justify-center relative">
-        <ul className="flex items-center hidden space-x-8 lg:flex">
-        <li className={easterEgg === 'jacopo@jacopoeasteregg' ? "text-red-600" : "text-red-600 hidden"}>
-          <button onClick={goEaster}>Easter Egg</button>
+      <div className="flex items-center grid-cols-2 lg:grid-cols-3 justify-center relative">
+        <ul className="items-center hidden space-x-8 lg:flex">
+          <li
+            className={
+              easterEgg === "jacopo@jacopoeasteregg"
+                ? "text-red-600"
+                : "text-red-600 hidden"
+            }
+          >
+            <button onClick={goEaster}>Easter Egg</button>
           </li>
-        <li>
+          <li>
             <a
               href="/"
               aria-label="Our product"

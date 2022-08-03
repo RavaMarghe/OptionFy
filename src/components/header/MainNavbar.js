@@ -8,8 +8,8 @@ export const MainNavbar = () => {
 
   return (
     <div className="px-4 py-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-      <div className="relative flex items-center grid-cols-2 lg:grid-cols-3 justify-center relative">
-        <ul className="flex items-center hidden space-x-8 lg:flex">
+      <div className="flex items-center grid-cols-2 lg:grid-cols-3 justify-center relative">
+        <ul className="items-center hidden space-x-8 lg:flex">
           <li>
             <a
               href="/"
