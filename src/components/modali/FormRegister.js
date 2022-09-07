@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function FormRegister() {
-  // START - ADD DATA TO SESSION STORAGE USING CLASS COMPONENT
+  // START - ADD DATA TO SESSION STORAGE USING A CLASS COMPONENT
   // const state = useState();
   // const [users, setState] = useState();
 
@@ -20,64 +20,73 @@ function FormRegister() {
       });
     } */
 
-  //END - ADD DATA TO SESSION STORAGE USING CLASS COMPONENT
+  //END - ADD DATA TO SESSION STORAGE USING A CLASS COMPONENT
 
-  const [firstName, setFirstName] = useState(""); //FORM
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [allUserData, setAllUserData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    password: "",
+    confirmPassword: "",
+    checkMe: false,
+  });
 
-  const [userAllData, setUserAllData] = useState({}); //Tutti i dati
-
-  function handleFirstNameChange(event) {
-    setFirstName(event.target.value);
-  }
-
-  function handleLastNameChange(event) {
-    setLastName(event.target.value);
-  }
-
-  function handleEmailChange(event) {
-    setEmail(event.target.value);
-  }
-
-  function handlePhoneNumberChange(event) {
-    setPhoneNumber(event.target.value);
-  }
-
-  function handlePasswordChange(event) {
-    setPassword(event.target.value);
-  }
-
-  function handleConfPasswordChange(event) {
-    setConfirmPassword(event.target.value);
-  }
+  const handleInput = (event) => {
+    const { name, type, value, checked } = event.target;
+    setAllUserData((data) => {
+      return {
+        ...data,
+        [name]: type !== "checkbox" ? value : checked,
+      };
+    });
+  };
 
   async function fetcherFunction(data) {
     const response = await fetch("http://localhost:8080/api/auth/signup", {
       method: "POST",
       headers: {
-        "Content-Type": "Application/json",
+        Accept: "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     });
     return response;
   }
 
-  function fetcherFunction2() {
-    let myObj = {
-      firstName,
-      lastName,
-      email,
-      phoneNumber,
-      password,
-      confirmPassword,
-    };
-    setUserAllData({ ...userAllData, ...myObj });
+  function handleSubmit() {
+    if (
+      allUserData !==
+      {
+        firstName: "",
+        lastName: "",
+        email: "",
+        phoneNumber: "",
+        password: "",
+        confirmPassword: "",
+        checkMe: false,
+      }
+    ) {
+      fetcherFunction(allUserData).then((res) => {
+        if (res.status === 200) {
+          alert("Congratulations, your account has been successfully created");
+        } else if (res.status === 400) {
+          alert("Registration failed. Email is already in use!");
+        } else {
+          alert("Something went wrong. Regitration failed");
+        }
+      });
+    }
 
-    fetcherFunction(userAllData);
+    setAllUserData({
+      email: "",
+      firstName: "",
+      lastName: "",
+      phoneNumber: "",
+      password: "",
+      confirmPassword: "",
+      checkMe: false,
+    });
   }
 
   return (
@@ -122,7 +131,8 @@ function FormRegister() {
           className="flex-grow w-full h-10 px-4 mb-2 transition duration-200 bg-gray-900 border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
           id="firstName"
           name="firstName"
-          onChange={handleFirstNameChange}
+          value={allUserData.firstName}
+          onChange={handleInput}
         />
       </div>
       <div className="mb-1 sm:mb-2">
@@ -133,7 +143,8 @@ function FormRegister() {
           className="flex-grow w-full h-10 px-4 mb-2 transition duration-200 bg-gray-900 border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
           id="lastName"
           name="lastName"
-          onChange={handleLastNameChange}
+          value={allUserData.lastName}
+          onChange={handleInput}
         />
       </div>
       <div className="mb-1 sm:mb-2">
@@ -142,9 +153,10 @@ function FormRegister() {
           required
           type="email"
           className="flex-grow w-full h-10 px-4 mb-2 transition duration-200 bg-gray-900 border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-          id="mail"
-          name="mail"
-          onChange={handleEmailChange}
+          id="email"
+          name="email"
+          value={allUserData.email}
+          onChange={handleInput}
         />
       </div>
       <div className="mb-1 sm:mb-2">
@@ -153,9 +165,10 @@ function FormRegister() {
           required
           type="tel"
           className="flex-grow w-full h-10 px-4 mb-2 transition duration-200 bg-gray-900 border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-          id="tel"
-          name="tel"
-          onChange={handlePhoneNumberChange}
+          id="phoneNumber"
+          name="phoneNumber"
+          value={allUserData.phoneNumber}
+          onChange={handleInput}
         />
       </div>
       <div className="mb-1 sm:mb-2">
@@ -164,9 +177,10 @@ function FormRegister() {
           required
           type="password"
           className="flex-grow w-full h-10 px-4 mb-2 transition duration-200 bg-gray-900 border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-          id="passWord"
-          name="passWord"
-          onChange={handlePasswordChange}
+          id="password"
+          name="password"
+          value={allUserData.password}
+          onChange={handleInput}
         />
       </div>
       <div className="mb-1 sm:mb-2">
@@ -175,20 +189,28 @@ function FormRegister() {
           required
           type="password"
           className="flex-grow w-full h-10 px-4 mb-2 transition duration-200 bg-gray-900 border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-          id="confirmPassWord"
-          name="confirmPassWord"
-          onChange={handleConfPasswordChange}
+          id="confirmPassword"
+          name="confirmPassword"
+          value={allUserData.confirmPassword}
+          onChange={handleInput}
         />
       </div>
       <div className="mb-1 sm:mb-2">
         <label>I agree to the Terms of Service </label>
-        <input required type="checkbox" id="checkBox" name="checkBox" />
+        <input
+          required
+          type="checkbox"
+          id="checkMe"
+          name="checkMe"
+          checked={allUserData.checkMe}
+          onChange={handleInput}
+        />
       </div>
       <div className="mt-4 mb-2 sm:mb-4">
         <button
           type="button"
           className="inline-flex items-center justify-center h-10 w-full font-medium text-white bottone"
-          onClick={fetcherFunction2}
+          onClick={handleSubmit}
         >
           Sign Up
         </button>
