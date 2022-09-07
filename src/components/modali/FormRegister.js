@@ -42,7 +42,7 @@ function FormRegister() {
     });
   };
 
-  async function fetcherFunction(data) {
+  async function fetcherRegistrationFunction(data) {
     const response = await fetch("http://localhost:8080/api/auth/signup", {
       method: "POST",
       headers: {
@@ -67,7 +67,7 @@ function FormRegister() {
         checkMe: false,
       }
     ) {
-      fetcherFunction(allUserData).then((res) => {
+      fetcherRegistrationFunction(allUserData).then((res) => {
         if (res.status === 200) {
           alert("Congratulations, your account has been successfully created");
         } else if (res.status === 400) {

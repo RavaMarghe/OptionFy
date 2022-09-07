@@ -1,13 +1,11 @@
-import { Navigate, Outlet } from "react-router"
+import { Navigate, Outlet } from "react-router";
 
-export function ProtectedArea({children}){
+export function ProtectedArea({ children }) {
+  const registered = localStorage.getItem("currentUser");
 
-    const registered = localStorage.getItem('users')
+  if (!registered) {
+    return <Navigate to="/" replace />;
+  }
 
-    if(!registered){
-        return <Navigate to="/" replace/>
-    }
-
-    return children ? children : <Outlet />
-
+  return children ? children : <Outlet />;
 }
