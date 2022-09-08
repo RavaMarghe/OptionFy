@@ -10,8 +10,8 @@ class FormContact extends React.Component {
     const phone = event.target.elements.pNum.value;
     const passWord = event.target.elements.password.value;
     const textarea = event.target.elements.txtname.value;
-    console.log({ firstName, lastName, mail, passWord, phone, textarea })
-    this._formRef.current.reset()
+    console.log({ firstName, lastName, mail, passWord, phone, textarea });
+    this._formRef.current.reset();
   };
 
   render() {
@@ -75,7 +75,7 @@ class FormContact extends React.Component {
             rows="4"
             cols="47"
             maxLength="180"
-            className="bg-gray-900 border border-gray-300 rounded"
+            className="bg-gray-900 flex-grow w-full h-18 px-4 mb-2 transition duration-200 border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
             placeholder="How can we help"
           ></textarea>
         </div>
