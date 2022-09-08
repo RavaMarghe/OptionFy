@@ -55,10 +55,14 @@ function FormLogin2() {
           alert("Something went wrong. Login failed");
         }
       })
-      .then((jsonRes) => {
-        if (jsonRes) localStorage.setItem("currentUser", JSON.stringify(data));
+      .then((jsonResOk) => {
+        /* if (jsonRes) localStorage.setItem("currentUser", JSON.stringify(data));
 
-        navigate("/dashboard");
+        navigate("/dashboard"); */
+        if (jsonResOk) {
+          localStorage.setItem("currentUser", JSON.stringify(jsonResOk));
+          navigate("/dashboard");
+        }
       });
   }
 
