@@ -6,3 +6,5 @@
 - eliminare proposte sottoscrizione al login
 - inserire alert in bottone GET STARTED homepage
 - aggiungere pagine fantasma per FEATURE "UNDER CONSTRUCTION"
+- aggiornare kanban trello
+- aggiungere pattern identificazione email
