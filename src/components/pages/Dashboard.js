@@ -1,4 +1,5 @@
 import { HeaderDashboard } from "../header/HeaderDashboard";
+import TradingView from "../tradingView/tradingView";
 
 export function Dashboard() {
   const loggedIn = JSON.parse(localStorage.getItem("currentUser"));
@@ -15,8 +16,9 @@ export function Dashboard() {
         <HeaderDashboard />
 
         <h1 className="text-center">
-          {userFirstName}, welcome to your dashboard{" "}
+          {userFirstName}, welcome to your dashboard{" "}         
         </h1>
+        <TradingView />
       </div>
     );
   }
