@@ -22,7 +22,7 @@ export const MainNavbar = () => {
           </li>
           <li>
             <a
-              href="/"
+              href="#pricing"
               aria-label="Our product"
               title="Our product"
               className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
