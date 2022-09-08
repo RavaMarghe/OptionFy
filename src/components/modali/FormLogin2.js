@@ -56,9 +56,6 @@ function FormLogin2() {
         }
       })
       .then((jsonResOk) => {
-        /* if (jsonRes) localStorage.setItem("currentUser", JSON.stringify(data));
-
-        navigate("/dashboard"); */
         if (jsonResOk) {
           localStorage.setItem("currentUser", JSON.stringify(jsonResOk));
           navigate("/dashboard");
