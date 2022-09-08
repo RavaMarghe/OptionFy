@@ -11,14 +11,12 @@ class TradingView extends Component {
       <div>
         <TradingViewStockChartWidget
           symbol="NASDAQ:AAPL"
-          theme="Dark"
           range="12m"
         />
-        <TradingViewMarketWidget
-          symbol="NASDAQ:AAPL"
-          theme="Dark"
-          range="12m"
-        />
+        <div className="flex justify-center ">
+          <TradingViewMarketWidget
+            />
+        </div>
       </div>
     );
   }

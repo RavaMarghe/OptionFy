@@ -12,11 +12,11 @@ export function Dashboard() {
   } */
   if (userFirstName) {
     return (
-      <div>
+      <div className="bg-gradient-to-t from-violet-900 to-black">
         <HeaderDashboard />
 
-        <h1 className="text-center">
-          {userFirstName}, welcome to your dashboard{" "}         
+        <h1 className="text-center text-gray-100 text-2xl">
+          {userFirstName}, welcome to your dashboard!{" "}         
         </h1>
         <TradingView />
       </div>
