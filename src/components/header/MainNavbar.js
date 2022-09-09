@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Navigate } from "react-router";
 import Img from "../../assets/LogoWhite.png";
 import Modal from "../modali/Modale";
 import Modal2 from "../modali/Modale2";
@@ -6,14 +7,19 @@ import Modal2 from "../modali/Modale2";
 export const MainNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const log = JSON.parse(localStorage.getItem("currentUser"));
-  const logMail = log.email;
+  const loggedIn2 = JSON.parse(localStorage.getItem("currentUser"));
+
+  //Logout Button
+  function logOut() {
+    localStorage.clear();
+    Navigate("/");
+  }
 
   return (
     <div className="px-4 py-3 mx-auto w-full lg:px-8">
       <div className="flex items-center justify-center relative w-full">
         <ul className="items-center hidden space-x-8 lg:flex">
-          <li className={!logMail ? "hidden" : ""}>
+          <li className={loggedIn2 ? "hidden" : ""}>
             <a
               href="/"
               title="Home"
@@ -31,7 +37,7 @@ export const MainNavbar = () => {
               Feature
             </a>
           </li>
-          <li className={!logMail ? "hidden" : ""}>
+          <li className={!loggedIn2 ? "hidden" : ""}>
             <a
               href="/dashboard"
               title="Dashboard"
@@ -40,7 +46,7 @@ export const MainNavbar = () => {
               Dashboard
             </a>
           </li>
-          <li className={logMail ? "hidden" : ""}>
+          <li className={loggedIn2 ? "hidden" : ""}>
             <a
               href="#pricing"
               title="Pricing"
@@ -49,11 +55,20 @@ export const MainNavbar = () => {
               Pricing
             </a>
           </li>
-          <li className={logMail ? "hidden" : ""}>
+          <li className={loggedIn2 ? "hidden" : ""}>
             <Modal2 />
           </li>
-          <li className={logMail ? "hidden" : ""}>
+          <li className={loggedIn2 ? "hidden" : ""}>
             <Modal />
+          </li>
+          <li>
+            <button
+              type="button"
+              className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+              onClick={logOut}
+            >
+              Logout
+            </button>
           </li>
         </ul>
         <img
@@ -121,7 +136,7 @@ export const MainNavbar = () => {
                 </div>
                 <nav>
                   <ul className="space-y-4">
-                    <li className={!logMail ? "hidden" : ""}>
+                    <li className={loggedIn2 ? "hidden" : ""}>
                       <a
                         href="/"
                         title="Home"
@@ -139,7 +154,11 @@ export const MainNavbar = () => {
                         Feature
                       </a>
                     </li>
-                    <li className={!logMail ? "hidden" : ""}>
+                    <li
+                      className={
+                        !loggedIn2 ? "hidden" : "border-b-2 border-white"
+                      }
+                    >
                       <a
                         href="/dashboard"
                         title="Dashboard"
@@ -150,7 +169,7 @@ export const MainNavbar = () => {
                     </li>
                     <li
                       className={
-                        logMail ? "hidden" : "border-b-2 border-white"
+                        loggedIn2 ? "hidden" : "border-b-2 border-white"
                       }
                     >
                       <a
@@ -161,11 +180,24 @@ export const MainNavbar = () => {
                         Pricing
                       </a>
                     </li>
-                    <li className={logMail ? "hidden" : ""}>
+                    <li className={loggedIn2 ? "hidden" : ""}>
                       <Modal2 />
                     </li>
-                    <li className={logMail ? "hidden" : ""}>
+                    <li className={loggedIn2 ? "hidden" : ""}>
                       <Modal />
+                    </li>
+                    <li
+                      className={
+                        !loggedIn2 ? "hidden" : "border-b-2 border-white"
+                      }
+                    >
+                      <button
+                        type="button"
+                        className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        onClick={logOut}
+                      >
+                        Logout
+                      </button>
                     </li>
                   </ul>
                 </nav>
