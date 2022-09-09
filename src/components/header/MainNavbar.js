@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Navigate } from "react-router";
 import Img from "../../assets/LogoWhite.png";
 import Modal from "../modali/Modale";
 import Modal2 from "../modali/Modale2";
@@ -12,7 +11,7 @@ export const MainNavbar = () => {
   //Logout Button
   function logOut() {
     localStorage.clear();
-    Navigate("/");
+    window.location.reload(true);
   }
 
   return (
@@ -64,7 +63,11 @@ export const MainNavbar = () => {
           <li>
             <button
               type="button"
-              className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className={
+                !loggedIn2
+                  ? "hidden"
+                  : "font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+              }
               onClick={logOut}
             >
               Logout
@@ -136,15 +139,6 @@ export const MainNavbar = () => {
                 </div>
                 <nav>
                   <ul className="space-y-4">
-                    <li className={loggedIn2 ? "hidden" : ""}>
-                      <a
-                        href="/"
-                        title="Home"
-                        className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Home
-                      </a>
-                    </li>
                     <li className="border-b-2 border-white">
                       <a
                         href="/feature"
