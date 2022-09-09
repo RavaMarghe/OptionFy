@@ -4,7 +4,8 @@ import TradingView from "../tradingView/tradingView";
 export function Dashboard() {
   const loggedIn = JSON.parse(localStorage.getItem("currentUser"));
   const userFirstName = loggedIn.firstName;
-  const firstNameCapitalized = userFirstName[0].toUpperCase() + userFirstName;
+  const firstNameCapitalized =
+    userFirstName[0].toUpperCase() + userFirstName.slice(1);
 
   if (userFirstName) {
     return (

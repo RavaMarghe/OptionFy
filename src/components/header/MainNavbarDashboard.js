@@ -1,18 +1,22 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import Img from "../../assets/LogoWhite.png";
-import Modal from "../modali/Modale";
-import Modal2 from "../modali/Modale2";
 
 export const MainNavbarDashboard = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  //Easter Egg navigation
   const loggedIn = JSON.parse(localStorage.getItem("currentUser"));
   const easterEggAcces = loggedIn.email;
-
-  const navigateToEaster = useNavigate();
+  const navigate = useNavigate();
   function goEaster() {
-    navigateToEaster("/dashboard/easteregg");
+    navigate("/dashboard/easteregg");
+  }
+
+  //Logout Button
+  function logOut() {
+    localStorage.clear();
+    navigate("/");
   }
 
   return (
@@ -49,20 +53,13 @@ export const MainNavbarDashboard = () => {
             </a>
           </li>
           <li>
-            <a
-              href="/"
-              aria-label="Our product"
-              title="Our product"
+            <button
+              type="button"
               className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+              onClick={logOut}
             >
-              Pricing
-            </a>
-          </li>
-          <li>
-            <Modal2 />
-          </li>
-          <li>
-            <Modal />
+              Logout
+            </button>
           </li>
         </ul>
         <img
