@@ -6,34 +6,53 @@ import Modal2 from "../modali/Modale2";
 export const MainNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const log = JSON.parse(localStorage.getItem("currentUser"));
+  const logMail = log.email;
+
   return (
     <div className="px-4 py-3 mx-auto w-full lg:px-8">
       <div className="flex items-center justify-center relative w-full">
         <ul className="items-center hidden space-x-8 lg:flex">
-          <li>
+          <li className={!logMail ? "hidden" : ""}>
             <a
               href="/"
-              aria-label="Our product"
-              title="Our product"
+              title="Home"
+              className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="/feature"
+              title="Feature"
               className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               Feature
             </a>
           </li>
-          <li>
+          <li className={!logMail ? "hidden" : ""}>
+            <a
+              href="/dashboard"
+              title="Dashboard"
+              className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+            >
+              Dashboard
+            </a>
+          </li>
+          <li className={logMail ? "hidden" : ""}>
             <a
               href="#pricing"
-              aria-label="Our product"
-              title="Our product"
+              title="Pricing"
               className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               Pricing
             </a>
           </li>
-          <li>
+          <li className={logMail ? "hidden" : ""}>
             <Modal2 />
           </li>
-          <li>
+          <li className={logMail ? "hidden" : ""}>
             <Modal />
           </li>
         </ul>
@@ -102,45 +121,51 @@ export const MainNavbar = () => {
                 </div>
                 <nav>
                   <ul className="space-y-4">
-                    <li>
+                    <li className={!logMail ? "hidden" : ""}>
                       <a
                         href="/"
-                        aria-label="Our product"
-                        title="Our product"
-                        className="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
+                        title="Home"
+                        className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                      >
+                        Home
+                      </a>
+                    </li>
+                    <li className="border-b-2 border-white">
+                      <a
+                        href="/feature"
+                        title="Feature"
+                        className="font-medium tracking-wide transition-colors duration-200"
                       >
                         Feature
                       </a>
                     </li>
-                    <li>
+                    <li className={!logMail ? "hidden" : ""}>
                       <a
-                        href="/"
-                        aria-label="Our product"
-                        title="Our product"
-                        className="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
+                        href="/dashboard"
+                        title="Dashboard"
+                        className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                      >
+                        Dashboard
+                      </a>
+                    </li>
+                    <li
+                      className={
+                        logMail ? "hidden" : "border-b-2 border-white"
+                      }
+                    >
+                      <a
+                        href="#pricing"
+                        title="Pricing"
+                        className="font-medium tracking-wide transition-colors duration-200"
                       >
                         Pricing
                       </a>
                     </li>
-                    <li>
-                      <a
-                        href="/"
-                        aria-label="Product pricing"
-                        title="Product pricing"
-                        className="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
-                      >
-                        Login
-                      </a>
+                    <li className={logMail ? "hidden" : ""}>
+                      <Modal2 />
                     </li>
-                    <li>
-                      <a
-                        href="/"
-                        aria-label="Sign in"
-                        title="Sign in"
-                        className="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
-                      >
-                        Sign Up
-                      </a>
+                    <li className={logMail ? "hidden" : ""}>
+                      <Modal />
                     </li>
                   </ul>
                 </nav>

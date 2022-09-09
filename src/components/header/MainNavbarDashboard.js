@@ -35,8 +35,7 @@ export const MainNavbarDashboard = () => {
           <li>
             <a
               href="/"
-              aria-label="Our product"
-              title="Our product"
+              title="Home"
               className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               Home
@@ -44,9 +43,8 @@ export const MainNavbarDashboard = () => {
           </li>
           <li>
             <a
-              href="/"
-              aria-label="Our product"
-              title="Our product"
+              href="/feature"
+              title="Feature"
               className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               Feature
@@ -130,42 +128,30 @@ export const MainNavbarDashboard = () => {
                     <li>
                       <a
                         href="/"
-                        aria-label="Our product"
-                        title="Our product"
+                        title="Home"
+                        className="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
+                      >
+                        Home
+                      </a>
+                    </li>
+
+                    <li>
+                      <a
+                        href="/feature"
+                        title="Feature"
                         className="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
                       >
                         Feature
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="/"
-                        aria-label="Our product"
-                        title="Our product"
-                        className="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
+                      <button
+                        type="button"
+                        className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400 border-b-2 border-white"
+                        onClick={logOut}
                       >
-                        Pricing
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
-                        aria-label="Product pricing"
-                        title="Product pricing"
-                        className="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
-                      >
-                        Login
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
-                        aria-label="Sign in"
-                        title="Sign in"
-                        className="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
-                      >
-                        Sign Up
-                      </a>
+                        Logout
+                      </button>
                     </li>
                   </ul>
                 </nav>
