@@ -7,8 +7,8 @@ export const MainNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="px-4 py-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-      <div className="flex items-center grid-cols-2 lg:grid-cols-3 justify-center relative">
+    <div className="px-4 py-3 mx-auto w-full lg:px-8">
+      <div className="flex items-center justify-center relative w-full">
         <ul className="items-center hidden space-x-8 lg:flex">
           <li>
             <a
@@ -45,7 +45,7 @@ export const MainNavbar = () => {
         <img
           src={Img}
           alt="logo"
-          className="w-28 absolute bottom-0 left-0 sm:block lg:hidden"
+          className="w-28 absolute top-1 left-0 sm:inline-block lg:hidden"
         />
 
         <div className="ml-auto lg:hidden z-10">

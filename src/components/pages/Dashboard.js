@@ -11,9 +11,9 @@ export function Dashboard() {
       <div className="bg-gradient-to-t from-violet-900 to-black">
         <HeaderDashboard />
 
-        <h1 className="text-center text-gray-100 text-2xl mt-3">
+        <p className="text-center text-gray-100 mt-3 text-sm md:text-xl">
           {firstNameCapitalized}, welcome to your dashboard!{" "}
-        </h1>
+        </p>
         <TradingView />
       </div>
     );
