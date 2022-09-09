@@ -1,6 +1,18 @@
+import { useState } from "react";
 import Img from "../../assets/landing.png";
 
 const HeroOne = () => {
+  //Newsletter registration
+  const [newsLetter, setNewsLetter] = useState("");
+  function handleEmail(event) {
+    setNewsLetter(event.target.value);
+  }
+
+  function newsLetterRegistration() {
+    alert(`Thanks for subscribing to the newsletter`);
+    console.log(`Address "${newsLetter}" added to mailing list`);
+  }
+
   return (
     <div className="bg-gradient-to-b from-violet-900 to-black">
       <div className="relative flex flex-col px-4 py-16 mx-auto lg:block lg:flex-col lg:py-32 xl:py-48 md:px-8 sm:max-w-xl md:max-w-full">
@@ -33,15 +45,18 @@ const HeroOne = () => {
               <div>
                 <input
                   placeholder="Email"
-                  required=""
-                  type="text"
+                  required
+                  type="email"
                   className="flex-grow w-full h-12 px-4 mb-3 transition duration-200 border border-gray-400 rounded shadow-sm appearance-none md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline bg-gray-900 text-white"
+                  value={newsLetter}
+                  onChange={handleEmail}
                 />
               </div>
               <div className="flex items-center mt-4">
                 <button
-                  type="submit"
+                  type="button"
                   className="inline-flex items-center justify-center h-12 px-20 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none bottone"
+                  onClick={newsLetterRegistration}
                 >
                   Get Started
                 </button>
