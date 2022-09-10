@@ -6,7 +6,7 @@ export default function Modal2() {
   return (
     <>
       <div
-        className="text-white cursor-pointer border-b-2 border-white lg:border-0"
+        className="text-white cursor-pointer lg:border-0 w-fit font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
         onClick={() => setShowModal(true)}
       >
         Login

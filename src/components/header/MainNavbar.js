@@ -18,15 +18,6 @@ export const MainNavbar = () => {
     <div className="px-4 py-3 mx-auto w-full lg:px-8">
       <div className="flex items-center justify-center relative w-full">
         <ul className="items-center hidden space-x-8 lg:flex">
-          <li className={loggedIn2 ? "hidden" : ""}>
-            <a
-              href="/"
-              title="Home"
-              className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
-            >
-              Home
-            </a>
-          </li>
           <li>
             <a
               href="/feature"
@@ -139,37 +130,29 @@ export const MainNavbar = () => {
                 </div>
                 <nav>
                   <ul className="space-y-4">
-                    <li className="border-b-2 border-white">
+                    <li>
                       <a
                         href="/feature"
                         title="Feature"
-                        className="font-medium tracking-wide transition-colors duration-200"
+                        className="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
                       >
                         Feature
                       </a>
                     </li>
-                    <li
-                      className={
-                        !loggedIn2 ? "hidden" : "border-b-2 border-white"
-                      }
-                    >
+                    <li className={!loggedIn2 ? "hidden" : ""}>
                       <a
                         href="/dashboard"
                         title="Dashboard"
-                        className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
                       >
                         Dashboard
                       </a>
                     </li>
-                    <li
-                      className={
-                        loggedIn2 ? "hidden" : "border-b-2 border-white"
-                      }
-                    >
+                    <li className={loggedIn2 ? "hidden" : ""}>
                       <a
                         href="#pricing"
                         title="Pricing"
-                        className="font-medium tracking-wide transition-colors duration-200"
+                        className="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
                       >
                         Pricing
                       </a>
@@ -180,14 +163,10 @@ export const MainNavbar = () => {
                     <li className={loggedIn2 ? "hidden" : ""}>
                       <Modal />
                     </li>
-                    <li
-                      className={
-                        !loggedIn2 ? "hidden" : "border-b-2 border-white"
-                      }
-                    >
+                    <li className={!loggedIn2 ? "hidden" : ""}>
                       <button
                         type="button"
-                        className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className="font-medium tracking-wide transition-colors duration-200 border-b-2 border-white"
                         onClick={logOut}
                       >
                         Logout
