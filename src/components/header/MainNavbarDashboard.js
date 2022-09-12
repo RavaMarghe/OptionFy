@@ -19,6 +19,11 @@ export const MainNavbarDashboard = () => {
     navigate("/");
   }
 
+  //logo redirection
+  function toHome2() {
+    navigate("/");
+  }
+
   return (
     <div className="px-4 py-3 mx-auto w-full lg:px-8">
       <div className="flex items-center justify-center relative w-full">
@@ -63,12 +68,14 @@ export const MainNavbarDashboard = () => {
         <img
           src={Img}
           alt="logo"
-          className="w-28 absolute bottom-0 right-0 hidden lg:block"
+          className="w-28 absolute bottom-0 right-0 hidden lg:block cursor-pointer"
+          onClick={toHome2}
         />
         <img
           src={Img}
           alt="logo"
-          className="w-28 absolute bottom-0 left-0 sm:block lg:hidden"
+          className="w-28 absolute bottom-0 left-0 sm:block lg:hidden cursor-pointer"
+          onClick={toHome2}
         />
 
         <div className="ml-auto lg:hidden z-10">

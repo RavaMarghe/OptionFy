@@ -41,12 +41,17 @@ const HeroOne = () => {
                 </strong>
               </p>
             </div>
-            <form>
+            <form
+              action="https://formsubmit.co/margherita.ravanello@gmail.com"
+              method="POST"
+              onSubmit={newsLetterRegistration}
+            >
               <div>
                 <input
                   placeholder="Email"
                   required
                   type="email"
+                  name="email"
                   className="flex-grow w-full h-12 px-4 mb-3 transition duration-200 border border-gray-400 rounded shadow-sm appearance-none md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline bg-gray-900 text-white"
                   value={newsLetter}
                   onChange={handleEmail}
@@ -54,9 +59,8 @@ const HeroOne = () => {
               </div>
               <div className="flex items-center mt-4">
                 <button
-                  type="button"
+                  type="submit"
                   className="inline-flex items-center justify-center h-12 px-20 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none bottone"
-                  onClick={newsLetterRegistration}
                 >
                   Get Started
                 </button>

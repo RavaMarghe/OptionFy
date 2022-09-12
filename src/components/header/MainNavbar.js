@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import Img from "../../assets/LogoWhite.png";
 import Modal from "../modali/Modale";
 import Modal2 from "../modali/Modale2";
@@ -7,11 +8,17 @@ export const MainNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const loggedIn2 = JSON.parse(localStorage.getItem("currentUser"));
-
+  const toHome = useNavigate();
   //Logout Button
   function logOut() {
     localStorage.clear();
+    toHome("/");
     window.location.reload(true);
+  }
+
+  //logo redirection
+  function toHome2() {
+    toHome("/");
   }
 
   return (
@@ -68,12 +75,14 @@ export const MainNavbar = () => {
         <img
           src={Img}
           alt="logo"
-          className="w-28 absolute bottom-0 right-0 hidden lg:block"
+          className="w-28 absolute bottom-0 right-0 hidden lg:block cursor-pointer"
+          onClick={toHome2}
         />
         <img
           src={Img}
           alt="logo"
-          className="w-28 absolute top-1 left-0 sm:inline-block lg:hidden"
+          className="w-28 absolute top-1 left-0 sm:inline-block lg:hidden cursor-pointer"
+          onClick={toHome2}
         />
 
         <div className="ml-auto lg:hidden z-10">

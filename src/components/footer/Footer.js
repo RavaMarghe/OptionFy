@@ -16,10 +16,10 @@ export function Footer() {
           </a>
         </div>
         <div className="flex justify-end text-gray-100 pt-5">
-          <a href="/" className="p-2">
+          <a href="/terms" className="p-2">
             TERMS OF SERVICE
           </a>
-          <a href="/" className="p-2">
+          <a href="/privacy" className="p-2">
             PRIVACY POLICY
           </a>
           <a href="/disclaimer" className="p-2">
