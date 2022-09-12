@@ -176,9 +176,13 @@ export default function Privacy() {
             asked for cannot be provided, and We only use these Cookies to
             provide You with those services.
           </p>
-          <li>First name and last name</li>
-          <li>Phone number</li>
-          <li>Usage Data</li>
+          <li className="font-bold">
+            Cookies Policy / Notice Acceptance Cookies
+          </li>
+          <p></p>
+          <p></p>
+          <p></p>
+          <li className="font-bold">Phone number</li>
         </ul>
       </div>
     </div>

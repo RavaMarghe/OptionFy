@@ -22,7 +22,7 @@ export function Footer() {
           <a href="/" className="p-2">
             PRIVACY POLICY
           </a>
-          <a href="/" className="p-2">
+          <a href="/disclaimer" className="p-2">
             DISCLAIMER
           </a>
         </div>
