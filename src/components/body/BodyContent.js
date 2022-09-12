@@ -46,7 +46,7 @@ export function BodyContent() {
           key={row.id}
           className={
             row.id % 2
-              ? "text-gray-100 flex justify-center overflow-hidden my-10 md:my-20 lg:my-24 mx-2 mb-2 p-5 lg:md:p-10 lg:pb-8 md:mx-10 lg:mx-20 border-x-4 border-y lg:rounded-tl-full lg:rounded-br-full rounded-tl-3xl rounded-brs-3xl border-violet-900 bg-black lg:h-75"
+              ? "text-gray-100 flex justify-center overflow-hidden my-10 md:my-20 lg:my-24 mx-2 mb-2 p-5 lg:md:p-10 lg:pb-8 md:mx-10 lg:mx-20 border-x-4 border-y lg:rounded-tl-full lg:rounded-br-full rounded-tl-3xl rounded-br-3xl border-violet-900 bg-black lg:h-75"
               : "text-gray-100 flex flex-row-reverse justify-center items-centre overflow-hidden my-10 md:my-20 lg:my-24 mx-2 mb-2 p-5 lg:p-10 lg:pb-8 md:mx-10 lg:mx-20 border-x-4 border-y lg:rounded-tl-full lg:rounded-br-full rounded-tl-3xl rounded-br-3xl border-violet-900 bg-black lg:h-75"
           }
         >
