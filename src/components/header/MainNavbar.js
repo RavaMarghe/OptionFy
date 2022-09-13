@@ -108,8 +108,8 @@ export const MainNavbar = () => {
             </svg>
           </button>
           {isMenuOpen && (
-            <div className="absolute top-3 left-1/2 w-11/12">
-              <div className="p-5 bg-white border rounded shadow-sm bg-gradient-to-t from-violet-900 to-gray-900 text-white w-2/4">
+            <div className="absolute top-3 right-0 w-auto">
+              <div className="p-5 bg-white border rounded shadow-sm bg-gradient-to-t from-violet-900 to-gray-900 text-white w-full">
                 <div className="flex items-center justify-between mb-4 border-b-2 border-white">
                   <div>
                     <a
