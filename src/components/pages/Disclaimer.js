@@ -9,16 +9,16 @@ export default function Disclaimer() {
       <div className="bg-gradient-to-b from-violet-900 to-purple-900 text-white pt-5">
         <div className=" px-16 lg:px-32">
           <div>
-            <h1 className=" h1Size">Disclaimer</h1>
+            <h1 className="h1Size">Disclaimer</h1>
             <p>Last updated: February 15, 2022</p>
             <br />
-            <h1 className=" h1Size">
+            <h1 className="h1Size">
               Disclaimer Interpretation and Definitions
             </h1>
             <br />
             <div>
-              <h1 className=" h1Size">Interpretation</h1>
-              <p className="    ">
+              <h1 className="h1Size">Interpretation</h1>
+              <p>
                 The words of which the initial letter is capitalized have
                 meanings defined under the following conditions. The following
                 definitions shall have the same meaning regardless of whether
@@ -27,9 +27,9 @@ export default function Disclaimer() {
             </div>
             <br />
             <div>
-              <h1 className="     h1Size">Definitions</h1>
-              <p className=" ">For the purposes of this Disclaimer:</p>
-              <div className=" ml-8">
+              <h1 className="h1Size">Definitions</h1>
+              <p>For the purposes of this Disclaimer:</p>
+              <div className="ml-8">
                 <li>
                   Company (referred to as either "the Company", "We", "Us" or
                   "Our" in this Disclaimer) refers to Optionsfy LLC, 7901 4th St
@@ -49,8 +49,8 @@ export default function Disclaimer() {
             </div>
             <br />
             <div>
-              <h1 className="     h1Size">Disclaimer</h1>
-              <p className="    ">
+              <h1 className="h1Size">Disclaimer</h1>
+              <p>
                 The information contained on the Service is for general
                 information purposes only. The Company assumes no responsibility
                 for errors or omissions in the contents of the Service. In no
@@ -67,8 +67,8 @@ export default function Disclaimer() {
             </div>
             <br />
             <div>
-              <h1 className="     h1Size">External Links Disclaimer</h1>
-              <p className="    ">
+              <h1 className="h1Size">External Links Disclaimer</h1>
+              <p>
                 The Service may contain links to external websites that are not
                 provided or maintained by or in any way affiliated with the
                 Company. Please note that the Company does not guarantee the
@@ -78,8 +78,8 @@ export default function Disclaimer() {
             </div>
             <br />
             <div>
-              <h1 className="     h1Size">Errors and Omissions Disclaimer</h1>
-              <p className="    ">
+              <h1 className="h1Size">Errors and Omissions Disclaimer</h1>
+              <p>
                 The information given by the Service is for general guidance on
                 matters of interest only. Even if the Company takes every
                 precaution to insure that the content of the Service is both
@@ -93,8 +93,8 @@ export default function Disclaimer() {
             </div>
             <br />
             <div>
-              <h1 className="     h1Size">Fair Use Disclaimer</h1>
-              <p className="    ">
+              <h1 className="h1Size">Fair Use Disclaimer</h1>
+              <p>
                 The Company may use copyrighted material which has not always
                 been specifically authorized by the copyright owner. The Company
                 is making such material available for criticism, comment, news
@@ -108,8 +108,8 @@ export default function Disclaimer() {
             </div>
             <br />
             <div>
-              <h1 className="     h1Size">Views Expressed Disclaimer</h1>
-              <p className="    ">
+              <h1 className="h1Size">Views Expressed Disclaimer</h1>
+              <p>
                 The Service may contain views and opinions which are those of
                 the authors and do not necessarily reflect the official policy
                 or position of any other author, agency, organization, employer
@@ -124,8 +124,8 @@ export default function Disclaimer() {
             </div>
             <br />
             <div>
-              <h1 className="     h1Size">No Responsibility Disclaimer</h1>
-              <p className="    ">
+              <h1 className="h1Size">No Responsibility Disclaimer</h1>
+              <p>
                 The information on the Service is provided with the
                 understanding that the Company is not herein engaged in
                 rendering legal, accounting, tax, or other professional advice
@@ -140,8 +140,8 @@ export default function Disclaimer() {
             </div>
             <br />
             <div>
-              <h1 className="     h1Size">"Use at Your Own Risk" Disclaimer</h1>
-              <p className="    ">
+              <h1 className="h1Size">"Use at Your Own Risk" Disclaimer</h1>
+              <p>
                 All information in the Service is provided "as is", with no
                 guarantee of completeness, accuracy, timeliness or of the
                 results obtained from the use of this information, and without

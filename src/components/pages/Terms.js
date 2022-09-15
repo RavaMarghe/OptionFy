@@ -84,77 +84,72 @@ export function Terms() {
 
             <li>
               <h2 className="h2Size">RULES OF USER CONDUCT</h2>
-              <p>
-                By using this Site You acknowledge and agree that:
-                <ul className="list-disc ml-8">
-                  <li>
-                    Your use of this Site, including any content you submit,
-                    will comply with this Agreement and all applicable local,
-                    state, national and international laws, rules and
-                    regulations.
-                  </li>
-                </ul>
-              </p>
+              <p>By using this Site You acknowledge and agree that:</p>
+              <ul className="list-disc ml-8">
+                <li>
+                  Your use of this Site, including any content you submit, will
+                  comply with this Agreement and all applicable local, state,
+                  national and international laws, rules and regulations.
+                </li>
+              </ul>
+
               <br />
-              <p>
-                You will not use this Site in a manner that:
-                <ul className="list-disc ml-8">
-                  <li>
-                    Is illegal, or promotes or encourages illegal activity;
-                  </li>
-                  <li>
-                    Promotes, encourages or engages in child pornography or the
-                    exploitation of children;
-                  </li>
-                  <li>
-                    Promotes, encourages or engages in terrorism, violence
-                    against people, animals, or property;
-                  </li>
-                  <li>
-                    Promotes, encourages or engages in any spam or other
-                    unsolicited bulk email, or computer or network hacking or
-                    cracking;
-                  </li>
-                  <li>
-                    Infringes on the intellectual property rights of another
-                    User or any other person or entity;
-                  </li>
-                  <li>
-                    Violates the privacy or publicity rights of another User or
-                    any other person or entity, or breaches any duty of
-                    confidentiality that you owe to another User or any other
-                    person or entity;
-                  </li>
-                  <li>Interferes with the operation of this Site;</li>
-                  <li>
-                    Contains or installs any viruses, worms, bugs, Trojan
-                    horses, Cryptocurrency Miners or other code, files or
-                    programs designed to, or capable of, using many resources,
-                    disrupting, damaging, or limiting the functionality of any
-                    software or hardware.
-                  </li>
-                </ul>
-              </p>
+
+              <p>You will not use this Site in a manner that:</p>
+              <ul className="list-disc ml-8">
+                <li>Is illegal, or promotes or encourages illegal activity;</li>
+                <li>
+                  Promotes, encourages or engages in child pornography or the
+                  exploitation of children;
+                </li>
+                <li>
+                  Promotes, encourages or engages in terrorism, violence against
+                  people, animals, or property;
+                </li>
+                <li>
+                  Promotes, encourages or engages in any spam or other
+                  unsolicited bulk email, or computer or network hacking or
+                  cracking;
+                </li>
+                <li>
+                  Infringes on the intellectual property rights of another User
+                  or any other person or entity;
+                </li>
+                <li>
+                  Violates the privacy or publicity rights of another User or
+                  any other person or entity, or breaches any duty of
+                  confidentiality that you owe to another User or any other
+                  person or entity;
+                </li>
+                <li>Interferes with the operation of this Site;</li>
+                <li>
+                  Contains or installs any viruses, worms, bugs, Trojan horses,
+                  Cryptocurrency Miners or other code, files or programs
+                  designed to, or capable of, using many resources, disrupting,
+                  damaging, or limiting the functionality of any software or
+                  hardware.
+                </li>
+              </ul>
+
               <br />
-              <p>
-                You will not:
-                <ul className="list-disc ml-8">
-                  <li>
-                    copy or distribute in any medium any part of this Site,
-                    except where expressly authorized by Company,
-                  </li>
-                  <li>copy or duplicate this Terms of Services agreement,</li>
-                  <li>
-                    modify or alter any part of this Site or any of its related
-                    technologies,
-                  </li>
-                  <li>
-                    access Companies Content (as defined below) or User Content
-                    through any technology or means other than through this Site
-                    itself.
-                  </li>
-                </ul>
-              </p>
+
+              <p>You will not:</p>
+              <ul className="list-disc ml-8">
+                <li>
+                  copy or distribute in any medium any part of this Site, except
+                  where expressly authorized by Company,
+                </li>
+                <li>copy or duplicate this Terms of Services agreement,</li>
+                <li>
+                  modify or alter any part of this Site or any of its related
+                  technologies,
+                </li>
+                <li>
+                  access Companies Content (as defined below) or User Content
+                  through any technology or means other than through this Site
+                  itself.
+                </li>
+              </ul>
             </li>
 
             <br />
